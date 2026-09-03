@@ -38,6 +38,7 @@ from deeptutor.services.provider_registry import PROVIDERS, ProviderSpec, find_b
 # via the "Show all" option. Names match ProviderSpec.name in provider_registry.
 
 FEATURED_LLM_PROVIDERS: tuple[str, ...] = (
+    "aimlapi",
     "openai",
     "anthropic",
     "deepseek",
