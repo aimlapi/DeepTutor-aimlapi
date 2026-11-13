@@ -3,6 +3,42 @@
   "note": "Remote-transport-first curated MCP catalog. Every endpoint below was verified by sending an MCP `initialize` request to it, and every credential target was taken from the server's own auth challenge or from the vendor's documentation. stdio entries carry self_service:false because a command is host execution as the app user. logo_url is intentionally empty everywhere: a third-party logo CDN would receive every user's installed-service list on each render.",
   "entries": [
     {
+      "id": "aimlapi",
+      "display_name": "AI/ML API",
+      "category": "ai",
+      "tier": "curated",
+      "trust": "unverified",
+      "transport": "streamableHttp",
+      "description": {
+        "en": "Find and compare AI models, run chat, image, video, and audio models, and search the web.",
+        "zh": "查找并比较 AI 模型，调用对话、图像、视频与音频模型，并进行网页搜索。"
+      },
+      "requires": {
+        "en": "AI/ML API key.",
+        "zh": "需要 AI/ML API 密钥。"
+      },
+      "server": {
+        "url": "https://mcp.aimlapi.com/mcp",
+        "tool_timeout": 60
+      },
+      "fields": [
+        {
+          "key": "api_key",
+          "label": {
+            "en": "AI/ML API key",
+            "zh": "AI/ML API 密钥"
+          },
+          "target": [
+            "header",
+            "Authorization"
+          ],
+          "value_template": "Bearer {value}"
+        }
+      ],
+      "homepage": "https://aimlapi.com",
+      "docs_url": "https://docs.aimlapi.com/quickstart/mcp"
+    },
+    {
       "id": "airtable",
       "display_name": "Airtable",
       "category": "business",

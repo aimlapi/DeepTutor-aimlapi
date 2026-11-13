@@ -31,8 +31,8 @@ from deeptutor.services.mcp.secrets import SECRET_REFERENCE_RE
 
 #: The vendored catalog's size, asserted so an edit that guts it is visible in
 #: a diff rather than silently shipping an empty store.
-VENDORED_ENTRY_COUNT = 46
-VENDORED_SELF_SERVICE_COUNT = 39
+VENDORED_ENTRY_COUNT = 47
+VENDORED_SELF_SERVICE_COUNT = 40
 
 
 @pytest.fixture(autouse=True)
